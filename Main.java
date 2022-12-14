@@ -6,9 +6,18 @@ class Main {
     System.out.println(binarySearch(list, target));
     selectionSort(unsortedList);
     print(unsortedList);
-    
+    System.out.println();
   }
 
+  /*
+  * the binarySerach function calls a binary search algorithm
+  * on a list of integers when given a target. the alorithm only works
+  * if the list is sorted (call the selectionSort() function to sort 
+  * the array. the function will traverse through a portion of the sorted
+  * array to find its target value.
+  * @param int[] list
+  * @param int target
+  */
   public static int binarySearch(int[] list, int target){
     int min = 0;
     int max = list.length - 1;
@@ -25,7 +34,14 @@ class Main {
     }
     return -1;
   }
-
+  
+  /*
+  * the selectionSort function calls a selection sort alorithm
+  * on an array passed in as a parameter. the function loops through 
+  * the entire array and swaps the indices of elements in order to 
+  * put them in a sorted order. the algorithm runs in O(N^2) time complexity.
+  * @param int[] list
+  */
   public static void selectionSort(int[] list){
     for(int i = 0; i < list.length; i++){
       int smallestIndex = i;
@@ -40,6 +56,10 @@ class Main {
     }
   }
 
+  /*
+  * the print method prints every element in an array
+  * @param int[] list
+  */
   public static void print(int[] list){
     for(int i = 0; i < list.length; i++){
       System.out.print(list[i] + " ");
